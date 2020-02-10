@@ -23,4 +23,5 @@ public class TelaDeAcessoActivity extends AppCompatActivity {
         Intent intent = new Intent(getApplicationContext(), MainActivity.class);
         startActivity(intent);
     }
+
 }
