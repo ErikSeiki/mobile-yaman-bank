@@ -23,13 +23,13 @@ public class SairFragment extends Fragment {
         sairViewModel =
                 ViewModelProviders.of(this).get(SairViewModel.class);
         View root = inflater.inflate(R.layout.fragment_sair, container, false);
-        final TextView textView = root.findViewById(R.id.text_sair);
-        sairViewModel.getText().observe(this, new Observer<String>() {
-            @Override
-            public void onChanged(@Nullable String s) {
-                textView.setText(s);
-            }
-        });
+//        final TextView textView = root.findViewById(R.id.text_sair);
+//        sairViewModel.getText().observe(this, new Observer<String>() {
+//            @Override
+//            public void onChanged(@Nullable String s) {
+//                textView.setText(s);
+//            }
+//        });
         return root;
     }
 }

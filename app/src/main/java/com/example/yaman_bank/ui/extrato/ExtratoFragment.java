@@ -23,13 +23,13 @@ public class ExtratoFragment extends Fragment {
         extratoViewModel =
                 ViewModelProviders.of (this).get(ExtratoViewModel.class);
         View root = inflater.inflate(R.layout.fragment_extrato, container, false);
-        final TextView textView = root.findViewById(R.id.text_extrato);
-        extratoViewModel.getText().observe(this, new Observer<String>() {
-            @Override
-            public void onChanged(@Nullable String s) {
-                textView.setText(s);
-            }
-        });
+//        final TextView textView = root.findViewById(R.id.text_extrato);
+//        extratoViewModel.getText().observe(this, new Observer<String>() {
+//            @Override
+//            public void onChanged(@Nullable String s) {
+//                textView.setText(s);
+//            }
+//        });
         return root;
     }
 }

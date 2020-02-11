@@ -23,13 +23,13 @@ public class TransferenciaFragment extends Fragment {
         transferenciaViewModel =
                 ViewModelProviders.of(this).get(TransferenciaViewModel.class);
         View root = inflater.inflate(R.layout.fragment_transferencia, container, false);
-        final TextView textView = root.findViewById(R.id.text_transferencia);
-        transferenciaViewModel.getText().observe(this, new Observer<String>() {
-            @Override
-            public void onChanged(@Nullable String s) {
-                textView.setText(s);
-            }
-        });
+//        final TextView textView = root.findViewById(R.id.text_transferencia);
+//        transferenciaViewModel.getText().observe(this, new Observer<String>() {
+//            @Override
+//            public void onChanged(@Nullable String s) {
+//                textView.setText(s);
+//            }
+//        });
         return root;
     }
 }
