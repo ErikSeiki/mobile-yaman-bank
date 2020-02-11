@@ -1,0 +1,160 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".TelaDeAcessoActivity">
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/activity_login_linha_vertical_direita"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.95" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/activity_login_linha_vertical_esquerda"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.05" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/activity_login_linha_horizontal_em_cima"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.07" />
+
+    <TextView
+        android:id="@+id/activity_login_text_acesse"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/acesse_sua_conta"
+        android:textSize="22sp"
+        android:textColor="@color/textos"
+        app:layout_constraintTop_toBottomOf="@+id/activity_login_linha_horizontal_em_cima"
+        app:layout_constraintStart_toStartOf="@+id/activity_login_linha_vertical_esquerda"
+        app:layout_constraintEnd_toStartOf="@+id/activity_login_linha_vertical_direita" />
+
+    <TextView
+        android:id="@+id/activity_login_img_logo"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="20dp"
+        android:text="Icone"
+        android:textAlignment="center"
+        android:textSize="18sp"
+        app:layout_constraintTop_toBottomOf="@+id/activity_login_text_acesse"
+        app:layout_constraintStart_toStartOf="@+id/activity_login_linha_vertical_esquerda"
+        app:layout_constraintEnd_toStartOf="@+id/activity_login_linha_vertical_direita" />
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/activity_login_edit_agencia"
+        android:layout_width="370dp"
+        android:layout_height="55dp"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/campo_login_yaman"
+        app:layout_constraintStart_toStartOf="@+id/activity_login_linha_vertical_esquerda"
+        app:layout_constraintEnd_toStartOf="@+id/activity_login_linha_vertical_direita"
+        app:layout_constraintTop_toBottomOf="@+id/activity_login_img_logo" >
+        <com.google.android.material.textfield.TextInputEditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/agencia"
+            android:inputType="number"
+            android:background="@null"
+            android:paddingLeft="10dp"/>
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/activity_login_edit_conta"
+        android:layout_width="370dp"
+        android:layout_height="55dp"
+        android:layout_marginTop="40dp"
+        android:background="@drawable/campo_login_yaman"
+        app:layout_constraintStart_toStartOf="@+id/activity_login_linha_vertical_esquerda"
+        app:layout_constraintEnd_toStartOf="@+id/activity_login_linha_vertical_direita"
+        app:layout_constraintTop_toBottomOf="@+id/activity_login_edit_agencia" >
+        <com.google.android.material.textfield.TextInputEditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/conta"
+            android:inputType="number"
+            android:background="@null"
+            android:paddingLeft="10dp"/>
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/activity_login_til_senha"
+        android:layout_width="370dp"
+        android:layout_height="55dp"
+        android:layout_marginTop="40dp"
+        android:background="@drawable/campo_login_yaman"
+        app:layout_constraintStart_toStartOf="@+id/activity_login_linha_vertical_esquerda"
+        app:layout_constraintEnd_toStartOf="@+id/activity_login_linha_vertical_direita"
+        app:layout_constraintTop_toBottomOf="@+id/activity_login_edit_conta">
+        <com.google.android.material.textfield.TextInputEditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/senha"
+            android:inputType="number"
+            android:background="@null"
+            android:paddingLeft="10dp"/>
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <Button
+        android:id="@+id/activity_login_botao_entrar"
+        android:layout_width="150dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="40dp"
+        android:text="@string/entrar_login"
+        android:textSize="20dp"
+        android:textColor="@color/branco"
+        android:background="@drawable/botao_yaman"
+        app:layout_constraintEnd_toStartOf="@+id/activity_login_linha_vertical_direita"
+        app:layout_constraintTop_toBottomOf="@id/activity_login_til_senha" />
+
+    <TextView
+        android:id="@+id/activity_login_text_esqueci_senha"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/esqueci_senha"
+        android:textSize="14dp"
+        android:textStyle="italic"
+        app:layout_constraintEnd_toStartOf="@+id/activity_login_linha_vertical_direita"
+        app:layout_constraintStart_toStartOf="@+id/activity_login_botao_entrar"
+        app:layout_constraintTop_toBottomOf="@+id/activity_login_botao_entrar" />
+
+
+    <Switch
+        android:id="@+id/activity_login_interruptor_salvar_dados"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_marginStart="13dp"
+        app:layout_constraintBottom_toTopOf="@+id/activity_login_text_salvar_dados"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/activity_login_text_salvar_dados"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/salvar_dados"
+        android:textSize="14dp"
+        android:textStyle="italic"
+        app:layout_constraintBottom_toBottomOf="@+id/activity_login_text_esqueci_senha"
+        app:layout_constraintStart_toStartOf="@+id/activity_login_linha_vertical_esquerda"
+        app:layout_constraintTop_toBottomOf="@+id/activity_login_botao_entrar" />
+
+    <TextView
+        android:id="@+id/activity_login_text_digital"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="75dp"
+        android:text="@string/acesse_digital"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toStartOf="@+id/activity_login_linha_vertical_direita"
+        app:layout_constraintStart_toStartOf="@+id/activity_login_linha_vertical_esquerda"
+        app:layout_constraintTop_toBottomOf="@+id/activity_login_text_esqueci_senha" />
+</androidx.constraintlayout.widget.ConstraintLayout>
