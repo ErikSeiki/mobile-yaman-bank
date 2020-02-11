@@ -1,5 +1,8 @@
 <resources>
     <string name="app_name">yaman-bank</string>
+    <string name="entrar">Entrar</string>
+    <string name="yamanBanking">Yaman Banking</string>
+    <string name="criarConta">Criar Conta</string>
     <string name="acesse_sua_conta">Faça login para acessar sua conta</string>
     <string name="agencia">Agencia</string>
     <string name="conta">Conta(com digito)</string>
