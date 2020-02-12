@@ -59,7 +59,7 @@
         app:layout_constraintTop_toBottomOf="@+id/activity_login_text_acesse" />
 
     <com.google.android.material.textfield.TextInputLayout
-        android:id="@+id/activity_login_edit_agencia"
+        android:id="@+id/activity_login_til_agencia"
         android:layout_width="0dp"
         android:layout_height="55dp"
         android:layout_marginTop="8dp"
@@ -78,14 +78,14 @@
     </com.google.android.material.textfield.TextInputLayout>
 
     <com.google.android.material.textfield.TextInputLayout
-        android:id="@+id/activity_login_edit_conta"
+        android:id="@+id/activity_login_til_conta"
         android:layout_width="0dp"
         android:layout_height="55dp"
         android:layout_marginTop="16dp"
         android:background="@drawable/campo_login_yaman"
         app:layout_constraintEnd_toStartOf="@+id/activity_login_linha_vertical_direita"
         app:layout_constraintStart_toStartOf="@+id/activity_login_linha_vertical_esquerda"
-        app:layout_constraintTop_toBottomOf="@+id/activity_login_edit_agencia">
+        app:layout_constraintTop_toBottomOf="@+id/activity_login_til_agencia">
 
         <com.google.android.material.textfield.TextInputEditText
             android:layout_width="match_parent"
@@ -104,7 +104,7 @@
         android:background="@drawable/campo_login_yaman"
         app:layout_constraintEnd_toStartOf="@+id/activity_login_linha_vertical_direita"
         app:layout_constraintStart_toStartOf="@+id/activity_login_linha_vertical_esquerda"
-        app:layout_constraintTop_toBottomOf="@+id/activity_login_edit_conta">
+        app:layout_constraintTop_toBottomOf="@+id/activity_login_til_conta">
 
         <com.google.android.material.textfield.TextInputEditText
             android:layout_width="match_parent"
@@ -120,7 +120,7 @@
         android:layout_width="150dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="16dp"
-        android:background="@drawable/botao_yaman"
+        android:background="@drawable/botao_confirmar_yaman"
         android:onClick="entrarMenu"
         android:text="@string/entrar_login"
         android:textColor="@color/branco"

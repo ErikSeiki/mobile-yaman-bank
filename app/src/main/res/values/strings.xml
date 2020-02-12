@@ -20,11 +20,18 @@
     <string name="criarConta">Criar Conta</string>
     <string name="acesse_sua_conta">Faça login para acessar sua conta</string>
     <string name="agencia">Agencia</string>
-    <string name="conta">Conta(com digito)</string>
+    <string name="conta">Conta (com digito)</string>
     <string name="senha">Senha(4 digito)</string>
     <string name="salvar_dados">Salvar Dados</string>
     <string name="acesse_digital">Acesso por digital</string>
     <string name="entrar_login">Entrar</string>
     <string name="esqueci_senha">Esqueci minha senha</string>
+    <string name="seu_saldo">Seu saldo:</string>
+    <string name="valor_saldo">R$ 00,00</string>
+    <string name="valor">Valor</string>
+    <string name="cancelar">Cancelar</string>
+    <string name="confirmar">Confirmar</string>
+    <string name="digite_senha">Digite sua senha</string>
+    <string name="ok">OK</string>
 </resources>
 

@@ -3,15 +3,168 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    android:background="@color/branco">
 
-    <TextView
-        android:id="@+id/text_transferencia"
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/fragment_transferencia_linha_vertical_esquerda"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/menu_sair"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.05" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/fragment_transferencia_linha_vertical_direita"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_begin="391dp" />
+
+    <!--androidx.constraintlayout.widget.Guideline
+        android:id="@+id/fragment_transferencia_linha_horizontal_top"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.10" /-->
+
+    <TextView
+        android:id="@+id/fragment_transferencia_img_logo"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="24dp"
+        android:text="Icone"
+        android:textAlignment="center"
+        android:textSize="18sp"
+        app:layout_constraintEnd_toStartOf="@+id/fragment_transferencia_linha_vertical_direita"
+        app:layout_constraintStart_toStartOf="@+id/fragment_transferencia_linha_vertical_esquerda"
         app:layout_constraintTop_toTopOf="parent" />
+
+    <View
+        android:id="@+id/fragment_transferencia_painel_formulario"
+        android:layout_width="0dp"
+        android:layout_height="335dp"
+        android:layout_marginTop="16dp"
+        android:background="@drawable/campo_login_yaman"
+        app:layout_constraintEnd_toEndOf="@+id/fragment_transferencia_linha_vertical_direita"
+        app:layout_constraintStart_toEndOf="@+id/fragment_transferencia_linha_vertical_esquerda"
+        app:layout_constraintTop_toBottomOf="@+id/fragment_transferencia_img_logo">>
+
+    </View>
+
+
+    <TextView
+        android:id="@+id/fragment_transferencia_text_seu_saldo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:text="@string/seu_saldo"
+        android:textSize="20dp"
+        app:layout_constraintStart_toStartOf="@+id/fragment_transferencia_linha_vertical_esquerda"
+        app:layout_constraintTop_toTopOf="@+id/fragment_transferencia_painel_formulario" />
+
+    <TextView
+        android:id="@+id/fragment_transferencia_text_valor"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:text="@string/valor_saldo"
+        android:textSize="20dp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="@+id/fragment_transferencia_text_seu_saldo"
+        app:layout_constraintStart_toEndOf="@+id/fragment_transferencia_text_seu_saldo"
+        app:layout_constraintTop_toTopOf="@+id/fragment_transferencia_text_seu_saldo" />
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/fragment_transferencia_til_agencia"
+        android:layout_width="0dp"
+        android:layout_height="55dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="16dp"
+        android:background="@drawable/campo_transferencia_yaman"
+        app:layout_constraintEnd_toStartOf="@+id/fragment_transferencia_linha_vertical_direita"
+        app:layout_constraintStart_toStartOf="@+id/fragment_transferencia_linha_vertical_esquerda"
+        app:layout_constraintTop_toBottomOf="@+id/fragment_transferencia_text_seu_saldo">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@null"
+            android:hint="@string/agencia"
+            android:inputType="number"
+            android:paddingLeft="10dp" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/activity_dialog_til_senha"
+        android:layout_width="0dp"
+        android:layout_height="55dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="16dp"
+        android:background="@drawable/campo_transferencia_yaman"
+        app:layout_constraintEnd_toStartOf="@+id/fragment_transferencia_linha_vertical_direita"
+        app:layout_constraintStart_toStartOf="@+id/fragment_transferencia_linha_vertical_esquerda"
+        app:layout_constraintTop_toBottomOf="@+id/fragment_transferencia_til_agencia">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@null"
+            android:hint="@string/conta"
+            android:inputType="number"
+            android:paddingLeft="10dp" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/fragment_transferencia_til_valor"
+        android:layout_width="0dp"
+        android:layout_height="55dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="16dp"
+        android:background="@drawable/campo_transferencia_yaman"
+        app:layout_constraintEnd_toStartOf="@+id/fragment_transferencia_linha_vertical_direita"
+        app:layout_constraintStart_toStartOf="@+id/fragment_transferencia_linha_vertical_esquerda"
+        app:layout_constraintTop_toBottomOf="@+id/activity_dialog_til_senha">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@null"
+            android:hint="@string/valor"
+            android:inputType="numberDecimal"
+            android:paddingLeft="10dp" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <Button
+        android:id="@+id/fragment_transferencia_botao_cancelar"
+        android:layout_width="150dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:background="@drawable/botao_cancelar_yaman"
+        android:text="@string/cancelar"
+        android:textAllCaps="false"
+        android:textColor="@color/vermelho"
+        app:layout_constraintStart_toStartOf="@+id/fragment_transferencia_linha_vertical_esquerda"
+        app:layout_constraintTop_toBottomOf="@+id/fragment_transferencia_til_valor" />
+
+    <Button
+        android:id="@+id/fragment_transferencia_botao_confirmar"
+        android:layout_width="150dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="16dp"
+        android:background="@drawable/botao_confirmar_yaman"
+        android:onClick=""
+        android:text="@string/confirmar"
+        android:textAllCaps="false"
+        android:textColor="@color/branco"
+        app:layout_constraintEnd_toStartOf="@+id/fragment_transferencia_linha_vertical_direita"
+        app:layout_constraintTop_toBottomOf="@+id/fragment_transferencia_til_valor" />
+
+
 </androidx.constraintlayout.widget.ConstraintLayout>
