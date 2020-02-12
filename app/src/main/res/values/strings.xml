@@ -1,4 +1,3 @@
-
 <resources>
     <string name="title_activity_menu">MenuActivity</string>
     <string name="navigation_drawer_open">Open navigation drawer</string>
@@ -32,7 +31,7 @@
     <string name="email">Email</string>
     <string name="editar">Editar</string>
     <string name="salvar">Salvar</string>
-    
+
     <string name="saldo_conta_poupanca">Saldo em conta poupança</string>
     <string name="saldo_conta_corrente">Saldo em conta corrente</string>
 
@@ -48,6 +47,10 @@
         <item> <b>no valor de</b> </item>
         <item> <b>R$ 5000,00</b></item>
     </string-array>
+    <string name="title_activity_contas">ContasActivity</string>
+
+    <string name="extrato_conta_corrente">Conta Corrente</string>
+    <string name="extrato_conta_poupanca">Conta Poupança</string>
 
 </resources>
 
