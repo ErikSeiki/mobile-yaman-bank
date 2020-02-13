@@ -4,7 +4,15 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".TelaDeAcessoActivity">
+    android:background="@color/branco"
+    tools:context=".LoginActivity">
+
+    <include
+        android:id="@+id/toolbar"
+        layout="@layout/toolbar"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <androidx.constraintlayout.widget.Guideline
         android:id="@+id/activity_login_linha_vertical_direita"
@@ -25,94 +33,99 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
-        app:layout_constraintGuide_percent="0.07" />
+        app:layout_constraintGuide_percent="0.10" />
 
     <TextView
         android:id="@+id/activity_login_text_acesse"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
         android:text="@string/acesse_sua_conta"
+        android:textColor="@color/texto"
         android:textSize="22sp"
-        android:textColor="@color/textos"
-        app:layout_constraintTop_toBottomOf="@+id/activity_login_linha_horizontal_em_cima"
+        app:layout_constraintEnd_toStartOf="@+id/activity_login_linha_vertical_direita"
         app:layout_constraintStart_toStartOf="@+id/activity_login_linha_vertical_esquerda"
-        app:layout_constraintEnd_toStartOf="@+id/activity_login_linha_vertical_direita" />
+        app:layout_constraintTop_toBottomOf="@+id/activity_login_linha_horizontal_em_cima" />
 
     <TextView
         android:id="@+id/activity_login_img_logo"
         android:layout_width="50dp"
         android:layout_height="50dp"
-        android:layout_marginTop="20dp"
+        android:layout_marginTop="8dp"
         android:text="Icone"
         android:textAlignment="center"
         android:textSize="18sp"
-        app:layout_constraintTop_toBottomOf="@+id/activity_login_text_acesse"
+        app:layout_constraintEnd_toStartOf="@+id/activity_login_linha_vertical_direita"
         app:layout_constraintStart_toStartOf="@+id/activity_login_linha_vertical_esquerda"
-        app:layout_constraintEnd_toStartOf="@+id/activity_login_linha_vertical_direita" />
+        app:layout_constraintTop_toBottomOf="@+id/activity_login_text_acesse" />
 
     <com.google.android.material.textfield.TextInputLayout
         android:id="@+id/activity_login_edit_agencia"
-        android:layout_width="370dp"
+        android:layout_width="0dp"
         android:layout_height="55dp"
-        android:layout_marginTop="20dp"
+        android:layout_marginTop="8dp"
         android:background="@drawable/campo_login_yaman"
-        app:layout_constraintStart_toStartOf="@+id/activity_login_linha_vertical_esquerda"
         app:layout_constraintEnd_toStartOf="@+id/activity_login_linha_vertical_direita"
-        app:layout_constraintTop_toBottomOf="@+id/activity_login_img_logo" >
+        app:layout_constraintStart_toStartOf="@+id/activity_login_linha_vertical_esquerda"
+        app:layout_constraintTop_toBottomOf="@+id/activity_login_img_logo">
+
         <com.google.android.material.textfield.TextInputEditText
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:background="@null"
             android:hint="@string/agencia"
             android:inputType="number"
-            android:background="@null"
-            android:paddingLeft="10dp"/>
+            android:paddingLeft="10dp" />
     </com.google.android.material.textfield.TextInputLayout>
 
     <com.google.android.material.textfield.TextInputLayout
         android:id="@+id/activity_login_edit_conta"
-        android:layout_width="370dp"
+        android:layout_width="0dp"
         android:layout_height="55dp"
-        android:layout_marginTop="40dp"
+        android:layout_marginTop="16dp"
         android:background="@drawable/campo_login_yaman"
-        app:layout_constraintStart_toStartOf="@+id/activity_login_linha_vertical_esquerda"
         app:layout_constraintEnd_toStartOf="@+id/activity_login_linha_vertical_direita"
-        app:layout_constraintTop_toBottomOf="@+id/activity_login_edit_agencia" >
+        app:layout_constraintStart_toStartOf="@+id/activity_login_linha_vertical_esquerda"
+        app:layout_constraintTop_toBottomOf="@+id/activity_login_edit_agencia">
+
         <com.google.android.material.textfield.TextInputEditText
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:background="@null"
             android:hint="@string/conta"
             android:inputType="number"
-            android:background="@null"
-            android:paddingLeft="10dp"/>
+            android:paddingLeft="10dp" />
     </com.google.android.material.textfield.TextInputLayout>
 
     <com.google.android.material.textfield.TextInputLayout
         android:id="@+id/activity_login_til_senha"
-        android:layout_width="370dp"
+        android:layout_width="0dp"
         android:layout_height="55dp"
-        android:layout_marginTop="40dp"
+        android:layout_marginTop="16dp"
         android:background="@drawable/campo_login_yaman"
-        app:layout_constraintStart_toStartOf="@+id/activity_login_linha_vertical_esquerda"
         app:layout_constraintEnd_toStartOf="@+id/activity_login_linha_vertical_direita"
+        app:layout_constraintStart_toStartOf="@+id/activity_login_linha_vertical_esquerda"
         app:layout_constraintTop_toBottomOf="@+id/activity_login_edit_conta">
+
         <com.google.android.material.textfield.TextInputEditText
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:background="@null"
             android:hint="@string/senha"
             android:inputType="number"
-            android:background="@null"
-            android:paddingLeft="10dp"/>
+            android:paddingLeft="10dp" />
     </com.google.android.material.textfield.TextInputLayout>
 
     <Button
         android:id="@+id/activity_login_botao_entrar"
         android:layout_width="150dp"
         android:layout_height="wrap_content"
-        android:layout_marginTop="40dp"
-        android:text="@string/entrar_login"
-        android:textSize="20dp"
-        android:textColor="@color/branco"
+        android:layout_marginTop="16dp"
         android:background="@drawable/botao_yaman"
+        android:onClick="entrarMenu"
+        android:text="@string/entrar_login"
+        android:textColor="@color/branco"
+        android:textSize="20dp"
         app:layout_constraintEnd_toStartOf="@+id/activity_login_linha_vertical_direita"
         app:layout_constraintTop_toBottomOf="@id/activity_login_til_senha" />
 
@@ -133,7 +146,7 @@
         android:layout_width="50dp"
         android:layout_height="50dp"
         android:layout_marginStart="13dp"
-        app:layout_constraintBottom_toTopOf="@+id/activity_login_text_salvar_dados"
+        app:layout_constraintBottom_toTopOf="@+id/activity_login_text_esqueci_senha"
         app:layout_constraintStart_toStartOf="parent" />
 
     <TextView
@@ -151,7 +164,7 @@
         android:id="@+id/activity_login_text_digital"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="75dp"
+        android:layout_marginTop="24dp"
         android:text="@string/acesse_digital"
         android:textSize="20sp"
         app:layout_constraintEnd_toStartOf="@+id/activity_login_linha_vertical_direita"
