@@ -33,5 +33,28 @@
     <string name="confirmar">Confirmar</string>
     <string name="digite_senha">Digite sua senha</string>
     <string name="ok">OK</string>
+    <string name="bem_vindo">Bem vindo ao Yaman Banking</string>
+    <string name="nome">Nome</string>
+    <string name="telefone">Telefone</string>
+    <string name="email">Email</string>
+    <string name="editar">Editar</string>
+    <string name="salvar">Salvar</string>
+    
+    <string name="saldo_conta_poupanca">Saldo em conta poupança</string>
+    <string name="saldo_conta_corrente">Saldo em conta corrente</string>
+
+    <string-array name="saldoAtualizado">
+        <item>Saldos atualizados com data de </item>
+        <item><b> 01/01/0001 </b></item>
+        <item> como referência</item>
+    </string-array>
+
+    <string-array name="ultimaTransferencia">
+        <item>Última transferência em </item>
+        <item> <b>01/01/2000</b> </item>
+        <item> <b>no valor de</b> </item>
+        <item> <b>R$ 5000,00</b></item>
+    </string-array>
+
 </resources>
 
