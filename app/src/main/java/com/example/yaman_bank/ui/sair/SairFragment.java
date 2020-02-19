@@ -1,14 +1,20 @@
 package com.example.yaman_bank.ui.sair;
 
+import android.app.AlertDialog;
+import android.app.Dialog;
+import android.content.DialogInterface;
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import androidx.annotation.Nullable;
 import androidx.annotation.NonNull;
 import androidx.fragment.app.Fragment;
+import androidx.fragment.app.FragmentManager;
 import androidx.lifecycle.Observer;
 import androidx.lifecycle.ViewModelProviders;
 
@@ -20,8 +26,7 @@ public class SairFragment extends Fragment {
 
     public View onCreateView(@NonNull LayoutInflater inflater,
                              ViewGroup container, Bundle savedInstanceState) {
-        sairViewModel =
-                ViewModelProviders.of(this).get(SairViewModel.class);
+        sairViewModel = ViewModelProviders.of(this).get(SairViewModel.class);
         View root = inflater.inflate(R.layout.fragment_sair, container, false);
 //        final TextView textView = root.findViewById(R.id.text_sair);
 //        sairViewModel.getText().observe(this, new Observer<String>() {
@@ -30,6 +35,7 @@ public class SairFragment extends Fragment {
 //                textView.setText(s);
 //            }
 //        });
+        getActivity().finish();
         return root;
     }
 }
