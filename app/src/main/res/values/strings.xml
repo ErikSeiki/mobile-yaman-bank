@@ -7,13 +7,11 @@
     <string name="nav_header_subtitle">android.studio@android.com</string>
     <string name="nav_header_desc">Navigation header</string>
     <string name="action_settings">Settings</string>
-
     <string name="menu_home">Home</string>
     <string name="menu_transferencia">Transferência</string>
     <string name="menu_sair">Sair</string>
     <string name="menu_perfil">Perfil</string>
     <string name="menu_extrato">Extrato</string>
-
     <string name="app_name">yaman-bank</string>
     <string name="entrar">Entrar</string>
     <string name="yamanBanking">Yaman Banking</string>
@@ -39,16 +37,13 @@
     <string name="email">Email</string>
     <string name="editar">Editar</string>
     <string name="salvar">Salvar</string>
-    
     <string name="saldo_conta_poupanca">Saldo em conta poupança</string>
     <string name="saldo_conta_corrente">Saldo em conta corrente</string>
-
     <string-array name="saldoAtualizado">
         <item>Saldos atualizados com data de </item>
         <item><b> 01/01/0001 </b></item>
         <item> como referência</item>
     </string-array>
-
     <string-array name="ultimaTransferencia">
         <item>Última transferência em </item>
         <item> <b>01/01/2000</b> </item>
