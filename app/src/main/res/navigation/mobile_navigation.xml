@@ -33,5 +33,5 @@
         android:id="@+id/nav_extrato"
         android:name="com.example.yaman_bank.ui.extrato.ExtratoFragment"
         android:label="@string/yamanBanking"
-        tools:layout="@layout/activity_contas" />
+        tools:layout="@layout/fragment_extrato" />
 </navigation>

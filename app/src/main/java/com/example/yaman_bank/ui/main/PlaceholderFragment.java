@@ -14,7 +14,11 @@ import androidx.annotation.NonNull;
 import androidx.fragment.app.Fragment;
 import androidx.lifecycle.Observer;
 import androidx.lifecycle.ViewModelProviders;
+import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
 
+import com.example.yaman_bank.MyAdapter;
+import com.example.yaman_bank.MyAdapter2;
 import com.example.yaman_bank.R;
 
 import java.util.ArrayList;
@@ -26,7 +30,10 @@ public class PlaceholderFragment extends Fragment {
 
     private static final String ARG_SECTION_NUMBER = "section_number";
 
+    RecyclerView recyclerView;
+
     private PageViewModel pageViewModel;
+    String s1[], s2[], s3[];
 
     public static PlaceholderFragment newInstance(int index) {
         PlaceholderFragment fragment = new PlaceholderFragment();
@@ -51,30 +58,19 @@ public class PlaceholderFragment extends Fragment {
     public View onCreateView(
             @NonNull LayoutInflater inflater, ViewGroup container,
             Bundle savedInstanceState) {
+
         View root = inflater.inflate(R.layout.fragment_contas, container, false);
-//        final ListView lista = root.findViewById(R.id.lista);
-//        pageViewModel.getText().observe(getViewLifecycleOwner(), new Observer<String>() {
-//            @Override
-//            public void onChanged(@Nullable String s) {
-//                ArrayList<String> equipes = preencherDados();
-//                ArrayAdapter<String> arrayAdapter = getStringArrayAdapter(equipes);
-//                lista.setAdapter(arrayAdapter);
-//            }
-//        });
+
+        recyclerView = root.findViewById(R.id.recycleView);
+
+        s1 = getResources().getStringArray(R.array.servico);
+        s2 = getResources().getStringArray(R.array.estabelecimento);
+        s3 = getResources().getStringArray(R.array.preco);
+
+        MyAdapter myAdapter = new MyAdapter(getContext(),s1, s2, s3);
+        recyclerView.setAdapter(myAdapter);
+        recyclerView.setLayoutManager(new LinearLayoutManager(getContext()));
 
         return root;
     }
-//
-//    private ArrayAdapter<String> getStringArrayAdapter(ArrayList<String> equipes) {
-//        return new ArrayAdapter<String>(
-//                            getActivity(), android.R.layout.simple_list_item_1, equipes);
-//    }
-
-//    public ArrayList<String> preencherDados() {
-//        ArrayList<String> dados = new ArrayList<String>();
-//        dados.add("Outback");
-//        dados.add("Americanas");
-//
-//        return dados;
-//    }
 }

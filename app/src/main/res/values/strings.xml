@@ -52,5 +52,28 @@
     <string name="extrato_conta_corrente">Conta Corrente</string>
     <string name="extrato_conta_poupanca">Conta Poupança</string>
 
+    <string-array name="servico">
+        <item>Alimentação</item>
+        <item>Supermercado</item>
+        <item>Lazer</item>
+        <item>Serviços</item>
+        <item>Serviços</item>
+    </string-array>
+
+    <string-array name="estabelecimento">
+        <item>Outback Steak House</item>
+        <item>Pão de Açucar</item>
+        <item>Libertadores da América</item>
+        <item>Mecânica dois irmãos</item>
+        <item>Mecânica dois irmãos</item>
+    </string-array>
+
+    <string-array name="preco">
+        <item>R$ 163,00</item>
+        <item>R$ 78,00</item>
+        <item>R$ 120,00</item>
+        <item>R$ 89,00</item>
+        <item>R$ 89,00</item>
+    </string-array>
 </resources>
 
