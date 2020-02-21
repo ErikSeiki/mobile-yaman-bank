@@ -130,19 +130,38 @@
             android:orientation="vertical"
             app:layout_constraintGuide_percent="0.05" />
 
-        <com.google.android.material.floatingactionbutton.FloatingActionButton
-            android:id="@+id/floatingActionButton3"
-            android:layout_width="43dp"
-            android:layout_height="40dp"
-            android:layout_marginTop="500dp"
-            android:background="@color/azulBotao"
-            android:clickable="true"
-            app:backgroundTint="@color/azulBotao"
-            app:fabSize="mini"
+        <com.getbase.floatingactionbutton.FloatingActionsMenu
+            android:id="@+id/botao_flutuante"
+            android:layout_width="67dp"
+            android:layout_height="121dp"
+            android:visibility="visible"
+            app:fab_addButtonColorNormal="@color/azulBotao"
+            app:fab_addButtonColorPressed="@color/amareloCabecalho"
+            app:fab_addButtonPlusIconColor="@color/brancoyaman"
             app:layout_constraintEnd_toStartOf="@+id/guideline6"
-            app:layout_constraintTop_toTopOf="parent"
-            app:maxImageSize="30dp"
-            app:srcCompat="@drawable/ic_aicionar_menu_novo" />
+            app:layout_constraintTop_toBottomOf="@+id/textView10">
+
+            <com.getbase.floatingactionbutton.FloatingActionButton
+                android:id="@+id/botao_flutuante2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:fab_colorNormal="@color/brancoyaman"
+                app:fab_colorPressed="@color/brancoyaman"
+                app:fab_icon="@drawable/ic_menu_camera"
+                app:fab_size="mini"
+                app:fab_title="Teste 1" />
+
+            <com.getbase.floatingactionbutton.FloatingActionButton
+                android:id="@+id/botao_flutuante3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:fab_colorNormal="@color/brancoyaman"
+                app:fab_colorPressed="@color/brancoyaman"
+                app:fab_icon="@drawable/ic_menu_gallery"
+                app:fab_size="mini"
+                app:fab_title="Teste 2" />
+
+        </com.getbase.floatingactionbutton.FloatingActionsMenu>
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 
