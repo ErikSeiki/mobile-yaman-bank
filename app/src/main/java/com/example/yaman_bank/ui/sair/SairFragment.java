@@ -36,6 +36,29 @@ public class SairFragment extends Fragment {
 //            }
 //        });
         getActivity().finish();
+
         return root;
+    }
+    public Dialog sair(){
+        AlertDialog.Builder builder = new AlertDialog.Builder(getActivity());
+        final LayoutInflater inflater = requireActivity().getLayoutInflater();
+        builder.setMessage("Tem certeza que deseja sair da aplicação")
+            .setPositiveButton(R.string.ok, new Dialog.OnClickListener(){
+                @Override
+                public void onClick(DialogInterface dialog, int which) {
+                    getActivity().finish();
+                }
+            })
+            .setNegativeButton(R.string.cancelar, new DialogInterface.OnClickListener() {
+                @Override
+                public void onClick(DialogInterface dialog, int which) {
+
+                }
+            })
+        ;
+
+
+        builder.show();
+        return builder.create();
     }
 }
