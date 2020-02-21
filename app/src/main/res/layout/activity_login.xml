@@ -55,8 +55,8 @@
         android:text="Icone"
         android:textAlignment="center"
         android:textSize="18sp"
-        app:layout_constraintEnd_toStartOf="@+id/activity_login_linha_vertical_direita"
-        app:layout_constraintStart_toStartOf="@+id/activity_login_linha_vertical_esquerda"
+        app:layout_constraintEnd_toEndOf="@+id/activity_login_text_acesse"
+        app:layout_constraintStart_toStartOf="@+id/activity_login_text_acesse"
         app:layout_constraintTop_toBottomOf="@+id/activity_login_text_acesse" />
 
     <com.google.android.material.textfield.TextInputLayout
@@ -84,8 +84,8 @@
         android:layout_height="55dp"
         android:layout_marginTop="16dp"
         android:background="@drawable/campo_login_yaman"
-        app:layout_constraintEnd_toStartOf="@+id/activity_login_linha_vertical_direita"
-        app:layout_constraintStart_toStartOf="@+id/activity_login_linha_vertical_esquerda"
+        app:layout_constraintEnd_toEndOf="@+id/activity_login_til_agencia"
+        app:layout_constraintStart_toStartOf="@+id/activity_login_til_agencia"
         app:layout_constraintTop_toBottomOf="@+id/activity_login_til_agencia">
 
         <com.google.android.material.textfield.TextInputEditText
@@ -103,8 +103,8 @@
         android:layout_height="55dp"
         android:layout_marginTop="16dp"
         android:background="@drawable/campo_login_yaman"
-        app:layout_constraintEnd_toStartOf="@+id/activity_login_linha_vertical_direita"
-        app:layout_constraintStart_toStartOf="@+id/activity_login_linha_vertical_esquerda"
+        app:layout_constraintEnd_toEndOf="@+id/activity_login_til_conta"
+        app:layout_constraintStart_toStartOf="@+id/activity_login_til_conta"
         app:layout_constraintTop_toBottomOf="@+id/activity_login_til_conta">
 
         <com.google.android.material.textfield.TextInputEditText
@@ -126,7 +126,7 @@
         android:text="@string/entrar_login"
         android:textColor="@color/branco"
         android:textSize="20dp"
-        app:layout_constraintEnd_toStartOf="@+id/activity_login_linha_vertical_direita"
+        app:layout_constraintEnd_toEndOf="@+id/activity_login_til_senha"
         app:layout_constraintTop_toBottomOf="@id/activity_login_til_senha" />
 
     <TextView
@@ -136,7 +136,7 @@
         android:text="@string/esqueci_senha"
         android:textSize="14dp"
         android:textStyle="italic"
-        app:layout_constraintEnd_toStartOf="@+id/activity_login_linha_vertical_direita"
+        app:layout_constraintEnd_toEndOf="@+id/activity_login_botao_entrar"
         app:layout_constraintStart_toStartOf="@+id/activity_login_botao_entrar"
         app:layout_constraintTop_toBottomOf="@+id/activity_login_botao_entrar" />
 
@@ -145,9 +145,10 @@
         android:id="@+id/activity_login_interruptor_salvar_dados"
         android:layout_width="50dp"
         android:layout_height="50dp"
-        android:layout_marginStart="13dp"
+        android:padding="5dp"
         app:layout_constraintBottom_toTopOf="@+id/activity_login_text_esqueci_senha"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintStart_toStartOf="@+id/activity_login_til_senha"
+        app:layout_constraintTop_toTopOf="@+id/activity_login_botao_entrar" />
 
     <TextView
         android:id="@+id/activity_login_text_salvar_dados"
@@ -157,7 +158,7 @@
         android:textSize="14dp"
         android:textStyle="italic"
         app:layout_constraintBottom_toBottomOf="@+id/activity_login_text_esqueci_senha"
-        app:layout_constraintStart_toStartOf="@+id/activity_login_linha_vertical_esquerda"
+        app:layout_constraintStart_toStartOf="@+id/activity_login_interruptor_salvar_dados"
         app:layout_constraintTop_toBottomOf="@+id/activity_login_botao_entrar" />
 
     <TextView
@@ -167,7 +168,14 @@
         android:layout_marginTop="24dp"
         android:text="@string/acesse_digital"
         android:textSize="20sp"
-        app:layout_constraintEnd_toStartOf="@+id/activity_login_linha_vertical_direita"
-        app:layout_constraintStart_toStartOf="@+id/activity_login_linha_vertical_esquerda"
+        app:layout_constraintEnd_toEndOf="@id/activity_login_botao_entrar"
+        app:layout_constraintStart_toStartOf="@+id/activity_login_interruptor_salvar_dados"
         app:layout_constraintTop_toBottomOf="@+id/activity_login_text_esqueci_senha" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline11"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_begin="241dp" />
 </androidx.constraintlayout.widget.ConstraintLayout>

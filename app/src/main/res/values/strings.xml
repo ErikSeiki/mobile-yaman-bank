@@ -36,7 +36,7 @@
     <string name="email">Email</string>
     <string name="editar">Editar</string>
     <string name="salvar">Salvar</string>
-  
+
     <string name="saldo_conta_poupanca">Saldo em conta poupança</string>
     <string name="saldo_conta_corrente">Saldo em conta corrente</string>
     <string-array name="saldoAtualizado">

@@ -52,8 +52,8 @@
         android:layout_marginTop="16dp"
         android:background="@drawable/campo_login_yaman"
         android:paddingLeft="8dp"
-        app:layout_constraintEnd_toStartOf="@+id/guideline4"
-        app:layout_constraintStart_toStartOf="@+id/guideline5"
+        app:layout_constraintEnd_toEndOf="@+id/textInputLayout8"
+        app:layout_constraintStart_toStartOf="@+id/textInputLayout8"
         app:layout_constraintTop_toBottomOf="@+id/textInputLayout8">
 
         <com.google.android.material.textfield.TextInputEditText
@@ -73,7 +73,7 @@
         android:background="@drawable/campo_login_yaman"
         android:paddingLeft="8dp"
         app:layout_constraintEnd_toStartOf="@+id/guideline4"
-        app:layout_constraintStart_toStartOf="@+id/guideline5"
+        app:layout_constraintStart_toStartOf="@+id/textInputLayout9"
         app:layout_constraintTop_toBottomOf="@+id/textInputLayout9">
 
         <com.google.android.material.textfield.TextInputEditText
@@ -92,7 +92,7 @@
         android:layout_marginTop="16dp"
         android:background="@drawable/campo_login_yaman"
         android:paddingLeft="8dp"
-        app:layout_constraintStart_toStartOf="@+id/guideline5"
+        app:layout_constraintStart_toStartOf="@+id/textInputLayout10"
         app:layout_constraintTop_toBottomOf="@+id/textInputLayout10">
 
         <com.google.android.material.textfield.TextInputEditText
@@ -112,7 +112,7 @@
         android:layout_marginTop="16dp"
         android:background="@drawable/campo_login_yaman"
         android:paddingLeft="8dp"
-        app:layout_constraintEnd_toStartOf="@+id/guideline4"
+        app:layout_constraintEnd_toEndOf="@+id/textInputLayout10"
         app:layout_constraintStart_toEndOf="@+id/textInputLayout11"
         app:layout_constraintTop_toBottomOf="@+id/textInputLayout10">
 
@@ -127,28 +127,32 @@
 
     <Button
         android:id="@+id/button3"
-        android:layout_width="150dp"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="24dp"
+        android:layout_marginEnd="8dp"
         android:background="@drawable/view_botao_editar"
         android:text="@string/editar"
         android:textAllCaps="false"
         android:textColor="@color/saldoPositivo"
         android:textSize="16dp"
-        app:layout_constraintStart_toStartOf="@+id/guideline5"
+        app:layout_constraintEnd_toStartOf="@+id/guideline2"
+        app:layout_constraintStart_toStartOf="@+id/textInputLayout11"
         app:layout_constraintTop_toBottomOf="@+id/textInputLayout11" />
 
     <Button
         android:id="@+id/button4"
-        android:layout_width="150dp"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
         android:layout_marginTop="24dp"
         android:background="@drawable/buttonyaman"
         android:text="@string/salvar"
         android:textAllCaps="false"
         android:textColor="@color/branco"
         android:textSize="16dp"
-        app:layout_constraintEnd_toStartOf="@+id/guideline4"
+        app:layout_constraintEnd_toEndOf="@+id/textInputLayout12"
+        app:layout_constraintStart_toStartOf="@+id/guideline2"
         app:layout_constraintTop_toBottomOf="@+id/textInputLayout12" />
 
     <androidx.constraintlayout.widget.Guideline
