@@ -12,6 +12,7 @@
         <activity android:name=".MainActivity" />
         <activity android:name=".LoginActivity" />
         <activity android:name=".MenuActivity" />
+        <activity android:name=".TabActivity" />
         <activity android:name=".TelaDeAcessoActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

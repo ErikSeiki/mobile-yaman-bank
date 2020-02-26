@@ -7,7 +7,10 @@ import androidx.annotation.StringRes;
 import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentManager;
 import androidx.fragment.app.FragmentPagerAdapter;
+import androidx.recyclerview.widget.RecyclerView;
 
+import com.example.yaman_bank.ContaCorrenteFragment;
+import com.example.yaman_bank.ContaPoupancaFragment;
 import com.example.yaman_bank.R;
 import com.example.yaman_bank.ui.extrato.ExtratoFragment;
 
@@ -30,8 +33,14 @@ public class SectionsPagerAdapter extends FragmentPagerAdapter {
     public Fragment getItem(int position) {
         // getItem is called to instantiate the fragment for the given page.
         // Return a PlaceholderFragment (defined as a static inner class below).
-
-        return PlaceholderFragment.newInstance(position + 1);
+        ContaCorrenteFragment contaCorrente = new ContaCorrenteFragment();
+        ContaPoupancaFragment contaPoupanca = new ContaPoupancaFragment();
+        if(position == 0) {
+            return contaCorrente;
+        } else {
+            return contaPoupanca;
+        }
+        //return PlaceholderFragment.newInstance(position +1);
     }
 
     @Nullable
